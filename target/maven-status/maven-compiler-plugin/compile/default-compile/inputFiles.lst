@@ -1,1 +1,10 @@
+/home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/controller/OrderController.java
+/home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/repository/ProductRepository.java
+/home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/impl/ProductServiceImpl.java
+/home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/ProductService.java
+/home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/repository/impl/InMemoryProductRepository.java
+/home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/impl/OrderServiceImpl.java
 /home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/controller/HomeController.java
+/home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/OrderService.java
+/home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/controller/ProductController.java
+/home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/Product.java
