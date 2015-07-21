@@ -27,4 +27,7 @@ public class ProductServiceImpl implements ProductService {
         return repository.getAllProducts();
     }
 
+    public Product getProductById(String productID) {
+        return repository.getProductById(productID);
+    }
 }
