@@ -22,5 +22,11 @@ public interface ProductService {
 
     Set<Product> getProductsByFilter(Map<String, List<String>> filterParams);
 
+    Set<Product> getProductsByFilter(String category, Map<String, List<String>> filterParams, String manufacturer);
+
     Product getProductById(String productID);
+
+    List<Product> getProductsByManufacturer(String manufacturer);
+
+    Set<Product> getProductsBypriceFilter(Map<String, List<String>> filterParams);
 }
