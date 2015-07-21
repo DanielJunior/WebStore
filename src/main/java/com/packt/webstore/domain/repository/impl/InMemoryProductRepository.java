@@ -15,6 +15,9 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 import com.packt.webstore.domain.Product;
 import com.packt.webstore.domain.repository.ProductRepository;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 @Repository
 public class InMemoryProductRepository implements ProductRepository {
@@ -79,6 +82,34 @@ public class InMemoryProductRepository implements ProductRepository {
                 productsByCategory.add(product);
             }
         }
+
+        return productsByCategory;
+    }
+
+    @Override
+    public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams) {
+        Set<Product> productsByBrand = new HashSet<>();
+        Set<Product> productsByCategory = new HashSet<>();
+        Set<String> criterias = filterParams.keySet();
+
+        if (criterias.contains("brand")) {
+            for (String brandName : filterParams.get("brand")) {
+                for (Product product : listOfProducts) {
+                    if (brandName.equalsIgnoreCase(product.getManufacturer())) {
+                        productsByBrand.add(product);
+                    }
+                }
+            }
+        }
+
+        if (criterias.contains("category")) {
+            for (String category : filterParams.get("category")) {
+
+                productsByCategory.addAll(this.getProductsByCategory(category));
+            }
+        }
+
+        productsByCategory.retainAll(productsByBrand);
 
         return productsByCategory;
     }

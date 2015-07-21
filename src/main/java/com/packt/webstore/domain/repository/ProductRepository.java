@@ -7,6 +7,8 @@ package com.packt.webstore.domain.repository;
 
 import com.packt.webstore.domain.Product;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  *
@@ -19,4 +21,6 @@ public interface ProductRepository {
     Product getProductById(String productID);
 
     List<Product> getProductsByCategory(String category);
+
+    Set<Product> getProductsByFilter(Map<String, List<String>> filterParams);
 }
