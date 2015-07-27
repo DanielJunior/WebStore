@@ -78,13 +78,6 @@ fields-->
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-lg-2" for="discontinued">Discontinued</label>
-                        <div class="col-lg-10">
-                            <form:checkbox id="discontinued" path="discontinued"/>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label class="control-label col-lg-2" for="condition">Condition</label>
                         <div class="col-lg-10">
                             <form:radiobutton path="condition"	value="New"/> New	
