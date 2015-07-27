@@ -1,3 +1,3 @@
 # WebStore
 
-[Link to running app](springwebstore.herokuapp.com)
+[Link to running app](https://springwebstore.herokuapp.com)
