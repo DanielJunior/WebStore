@@ -32,6 +32,13 @@
                             <form:input	id="productId"	path="productId" type="text" class="form:input-large"/>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-lg-2 col-lg-2" for="name">Name</label>
+                        <div class="col-lg-10">
+                            <form:input	id="name" path="name" type="text" class="form:input-large"/>
+                        </div>
+                    </div>
                     <!--	Similarly	bind	<--form:input>	tag	for	
 name,unitPrice,manufacturer,category,unitsInStock	and	unitsInOrder	
 fields-->
@@ -41,6 +48,35 @@ fields-->
                             <form:textarea id="description" path="description" rows="2"/>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-lg-2" for="unitPrice">Price</label>
+                        <div class="col-lg-10">
+                            <form:input id="unitPrice" path="unitPrice" type="number" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-lg-2" for="unitsInStock">Units in stock</label>
+                        <div class="col-lg-10">
+                            <form:input id="unitsInStock" path="unitsInStock" type="number" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-lg-2" for="manufacturer">Manufacturer</label>
+                        <div class="col-lg-10">
+                            <form:input id="manufacturer" path="manufacturer" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-lg-2" for="category">Category</label>
+                        <div class="col-lg-10">
+                            <form:input id="category" path="category" type="text" />
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label class="control-label col-lg-2" for="discontinued">Discontinued</label>
                         <div class="col-lg-10">
