@@ -6,6 +6,7 @@
 package com.packt.webstore.controller;
 
 import com.packt.webstore.domain.Product;
+import com.packt.webstore.exception.NoProductsFoundUnderCategoryException;
 import com.packt.webstore.service.ProductService;
 import java.io.File;
 import java.util.List;
@@ -58,8 +59,11 @@ public class ProductController {
     @RequestMapping("/{category}")
 //    I can also use @PathVariable String category, to retrieve uri parameter. Note that I try to get the same uri paramater name as the method parameter name
     public String getProductsByCategory(Model model, @PathVariable("category") String productCategory) {
-        model.addAttribute("products",
-                productService.getProductsByCategory(productCategory));
+        List<Product> products = productService.getProductsByCategory(productCategory);
+        if (products == null || products.isEmpty()) {
+            throw new NoProductsFoundUnderCategoryException();
+        }
+        model.addAttribute("products", products);
         return "products";
     }
 
