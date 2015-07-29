@@ -3,10 +3,12 @@ com/packt/webstore/service/impl/CustomerServiceImpl.class
 com/packt/webstore/controller/CustomerController.class
 com/packt/webstore/domain/repository/CustomerRepository.class
 com/packt/webstore/domain/Product.class
+com/packt/webstore/exception/ProductNotFoundException.class
 com/packt/webstore/service/impl/ProductServiceImpl.class
 com/packt/webstore/domain/repository/impl/InMemoryProductRepository.class
 com/packt/webstore/controller/LoginController.class
 com/packt/webstore/service/OrderService.class
+com/packt/webstore/exception/NoProductsFoundUnderCategoryException.class
 com/packt/webstore/domain/repository/ProductRepository.class
 com/packt/webstore/domain/Customer.class
 com/packt/webstore/controller/HomeController.class
