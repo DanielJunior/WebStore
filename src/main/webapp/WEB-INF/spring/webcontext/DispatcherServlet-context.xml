@@ -58,6 +58,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
         <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
             <property name="paramName" value="language"/>
         </bean>
+        <bean	class=	"com.packt.webstore.interceptor.AuditingInterceptor"/>
     </mvc:interceptors>
     
     <bean id="localeResolver"	
