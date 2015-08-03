@@ -17,17 +17,21 @@
     <body>
         <section>
             <div class="jumbotron">
-                <a href="<c:url	value="/j_spring_security_logout" />"	class="btn btn-danger btn-mini pull-right">logout</a>		
+                <a href="<c:url	value="/j_spring_security_logout" />"	class="btn btn-danger btn-mini pull-right">logout</a>
+                <div class="pull-right"	style="padding-right:50px">
+                    <a href="?language=en">English</a>|<a href="?language=pt">Português</a>
+                </div>
                 <div class="container">
-                    <h1>Products</h1>
-                    <p>Add products</p>
+                    <h1><spring:message code="app.products.title"/></h1>
+                    <p><spring:message code="app.products.subtitle"/></p>
                 </div>
             </div>
         </section>
         <section class="container">
             <form:form modelAttribute="newProduct" class="form-horizontal" enctype="multipart/form-data">
                 <fieldset>
-                    <legend>Add	new product</legend>
+                    <legend><spring:message code="addProduct.form.title"/></legend>
+
                     <div class="form-group">
                         <label class="control-label col-lg-2 col-lg-2" for="productId">
                             <spring:message code="addProduct.form.productId.label"/>
@@ -38,64 +42,79 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-lg-2 col-lg-2" for="name">Name</label>
+                        <label class="control-label col-lg-2 col-lg-2" for="name">
+                            <spring:message code="addProduct.form.name.label"/>
+                        </label>
                         <div class="col-lg-10">
                             <form:input	id="name" path="name" type="text" class="form:input-large"/>
                         </div>
                     </div>
-                    <!--	Similarly	bind	<--form:input>	tag	for	
-name,unitPrice,manufacturer,category,unitsInStock	and	unitsInOrder	
-fields-->
+
                     <div class="form-group">
-                        <label class="control-label col-lg-2" for="description">Description</label>
+                        <label class="control-label col-lg-2" for="description">
+                            <spring:message code="addProduct.form.description.label"/>
+                        </label>
                         <div class="col-lg-10">
                             <form:textarea id="description" path="description" rows="2"/>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-lg-2" for="unitPrice">Price</label>
+                        <label class="control-label col-lg-2" for="unitPrice">
+                            <spring:message code="addProduct.form.unitPrice.label"/>
+                        </label>
                         <div class="col-lg-10">
                             <form:input id="unitPrice" path="unitPrice" type="number" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-lg-2" for="unitsInStock">Units in stock</label>
+                        <label class="control-label col-lg-2" for="unitsInStock">
+                            <spring:message code="addProduct.form.unitsInStock.label"/>
+                        </label>
                         <div class="col-lg-10">
                             <form:input id="unitsInStock" path="unitsInStock" type="number" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-lg-2" for="manufacturer">Manufacturer</label>
+                        <label class="control-label col-lg-2" for="manufacturer">
+                            <spring:message code="addProduct.form.manufacturer.label"/> 
+                        </label>
                         <div class="col-lg-10">
                             <form:input id="manufacturer" path="manufacturer" type="text" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-lg-2" for="category">Category</label>
+                        <label class="control-label col-lg-2" for="category">
+                            <spring:message code="addProduct.form.category.label"/> 
+                        </label>
                         <div class="col-lg-10">
                             <form:input id="category" path="category" type="text" />
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-lg-2" for="condition">Condition</label>
+                        <label class="control-label col-lg-2" for="condition">
+                            <spring:message code="addProduct.form.category.label"/> 
+                        </label>
                         <div class="col-lg-10">
                             <form:radiobutton path="condition"	value="New"/> New	
                             <form:radiobutton path="condition"	value="Old"/> Old	
                             <form:radiobutton path="condition"	value="Refurbished"/> Refurbished
                         </div>
                     </div>
+
                     <div class="form-group">
-                        <label class="control-label col-lg-2" for="productImage"><spring:message code="addProduct.form.productImage.label"/></label>
+                        <label class="control-label col-lg-2" for="productImage">
+                            <spring:message code="addProduct.form.productImage.label"/>
+                        </label>
                         <div class="col-lg-10">
                             <form:input	id="productImage" path="productImage" type="file" class="form:input-large"/>
                         </div>
                     </div>
-                        
+
                     <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-10">
                             <input type="submit" id="btnAdd" class="btn	btn-primary" value="Add"/>
