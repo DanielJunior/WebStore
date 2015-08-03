@@ -43,7 +43,7 @@ public class ProductController {
 
     @InitBinder
     public void initialiseBinder(WebDataBinder binder) {
-        binder.setAllowedFields("productId", "name","language", "unitPrice", "description", "manufacturer", "category", "unitsInStock", "productImage", "condition");
+        binder.setAllowedFields("productId", "name", "language", "unitPrice", "description", "manufacturer", "category", "unitsInStock", "productImage", "condition");
         binder.setDisallowedFields("unitsInOrder", "discontinued");
     }
 
@@ -133,5 +133,10 @@ public class ProductController {
         }
         productService.addProduct(newProduct);
         return "redirect:/products";
+    }
+
+    @RequestMapping("/invalidPromoCode")
+    public String invalidPromoCode() {
+        return "invalidPromoCode";
     }
 }
