@@ -12,6 +12,7 @@
 /home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/repository/CustomerRepository.java
 /home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/repository/ProductRepository.java
 /home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/Customer.java
+/home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/interceptor/PerformanceMonitorInterceptor.java
 /home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/domain/repository/impl/InMemoryProductRepository.java
 /home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/controller/HomeController.java
 /home/danieljr/NetBeansProjects/webstore/src/main/java/com/packt/webstore/service/impl/CustomerServiceImpl.java

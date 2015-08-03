@@ -3,6 +3,7 @@ com/packt/webstore/service/impl/CustomerServiceImpl.class
 com/packt/webstore/controller/CustomerController.class
 com/packt/webstore/domain/repository/CustomerRepository.class
 com/packt/webstore/domain/Product.class
+com/packt/webstore/interceptor/PerformanceMonitorInterceptor.class
 com/packt/webstore/exception/ProductNotFoundException.class
 com/packt/webstore/service/impl/ProductServiceImpl.class
 com/packt/webstore/domain/repository/impl/InMemoryProductRepository.class
