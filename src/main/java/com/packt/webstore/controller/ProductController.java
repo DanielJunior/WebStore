@@ -9,7 +9,7 @@ import com.packt.webstore.domain.Product;
 import com.packt.webstore.exception.NoProductsFoundUnderCategoryException;
 import com.packt.webstore.exception.ProductNotFoundException;
 import com.packt.webstore.service.ProductService;
-import com.packt.webstore.validator.UnitsInStockValidator;
+import com.packt.webstore.validator.ProductValidator;
 import java.io.File;
 import java.util.List;
 import java.util.Map;
@@ -42,15 +42,15 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
-    
+
     @Autowired
-    private UnitsInStockValidator unitsInStockValidator;
+    private ProductValidator productValidator;
 
     @InitBinder
     public void initialiseBinder(WebDataBinder binder) {
         binder.setAllowedFields("productId", "name", "language", "unitPrice", "description", "manufacturer", "category", "unitsInStock", "productImage", "condition");
         binder.setDisallowedFields("unitsInOrder", "discontinued");
-        binder.setValidator(unitsInStockValidator);
+        binder.setValidator(productValidator);
     }
 
     @ExceptionHandler(ProductNotFoundException.class)
